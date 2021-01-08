@@ -5,6 +5,7 @@ txt.spellcheck = false;
 
 function randomBgColor() {
     document.body.innerHTML = '';
+    var r, g, b, bgColor;
     var rmin = JSON.parse(txt.value).r_min;
     var rmax = JSON.parse(txt.value).r_max;
     var gmin = JSON.parse(txt.value).g_min;
@@ -14,16 +15,16 @@ function randomBgColor() {
     if (JSON.parse(txt.value).isInterval == 'true') {
         setInterval(
         function randomBgColor() {
-            var r = Math.floor(Math.random() * (rmax - rmin + 1) + rmin);
-            var g = Math.floor(Math.random() * (gmax - gmin + 1) + gmin);
-            var b = Math.floor(Math.random() * (bmax - bmin + 1) + bmin);
-            var bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+            r = Math.floor(Math.random() * (rmax - rmin + 1) + rmin);
+            g = Math.floor(Math.random() * (gmax - gmin + 1) + gmin);
+            b = Math.floor(Math.random() * (bmax - bmin + 1) + bmin);
+            bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
             document.body.style.background = bgColor;
         }, 1000)
     }
-    var r = Math.floor(Math.random() * (rmax - rmin + 1) + rmin);
-    var g = Math.floor(Math.random() * (gmax - gmin + 1) + gmin);
-    var b = Math.floor(Math.random() * (bmax - bmin + 1) + bmin);
-    var bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    r = Math.floor(Math.random() * (rmax - rmin + 1) + rmin);
+    g = Math.floor(Math.random() * (gmax - gmin + 1) + gmin);
+    b = Math.floor(Math.random() * (bmax - bmin + 1) + bmin);
+    bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
     document.body.style.background = bgColor;
 }
