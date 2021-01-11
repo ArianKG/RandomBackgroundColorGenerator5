@@ -13,8 +13,7 @@ function randomBgColor() {
     var bmin = JSON.parse(txt.value).b_min;
     var bmax = JSON.parse(txt.value).b_max;
     if (JSON.parse(txt.value).isInterval == 'true') {
-        setInterval(
-        function randomBgColor() {
+        setInterval(() => {
             r = Math.floor(Math.random() * (rmax - rmin + 1) + rmin);
             g = Math.floor(Math.random() * (gmax - gmin + 1) + gmin);
             b = Math.floor(Math.random() * (bmax - bmin + 1) + bmin);
